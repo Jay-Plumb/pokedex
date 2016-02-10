@@ -18,6 +18,7 @@
 		96DB440A1C6AA50400F91BE5 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB44091C6AA50400F91BE5 /* csv.swift */; };
 		96DB440F1C6B819000F91BE5 /* Pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96DB440E1C6B818F00F91BE5 /* Pokemon.ttf */; };
 		96DB44111C6B852200F91BE5 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96DB44101C6B852200F91BE5 /* music.mp3 */; };
+		96DB44131C6B9DC400F91BE5 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB44121C6B9DC400F91BE5 /* PokemonDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		96DB44091C6AA50400F91BE5 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = csv.swift; path = ../csv.swift; sourceTree = "<group>"; };
 		96DB440E1C6B818F00F91BE5 /* Pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pokemon.ttf; path = ../Pokemon.ttf; sourceTree = "<group>"; };
 		96DB44101C6B852200F91BE5 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		96DB44121C6B9DC400F91BE5 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				96DB43F11C6A3CAB00F91BE5 /* ViewController.swift */,
+				96DB44121C6B9DC400F91BE5 /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				96DB44081C6A83FE00F91BE5 /* PokeCell.swift in Sources */,
 				96DB43F21C6A3CAB00F91BE5 /* ViewController.swift in Sources */,
 				96DB43F01C6A3CAB00F91BE5 /* AppDelegate.swift in Sources */,
+				96DB44131C6B9DC400F91BE5 /* PokemonDetailVC.swift in Sources */,
 				96DB44051C6A400F00F91BE5 /* Pokemon.swift in Sources */,
 				96DB440A1C6AA50400F91BE5 /* csv.swift in Sources */,
 			);

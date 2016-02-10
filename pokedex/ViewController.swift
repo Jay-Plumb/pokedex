@@ -80,7 +80,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Selecting an item
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let poke: Pokemon!
         
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        //print(poke.name)
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
     }
     
     // Number of items
@@ -129,7 +137,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    
-    
+    // Pass pokemon data to PokemonDetailVC
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
+        }
+    }
 }
 

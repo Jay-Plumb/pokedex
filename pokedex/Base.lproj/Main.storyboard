@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,9 +28,36 @@
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-Hu-ma1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-qk-ncn">
+                                        <rect key="frame" x="0.0" y="13" width="600" height="39"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-O6-mPY">
+                                        <rect key="frame" x="562" y="17" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="4Hy-ZX-SdB"/>
+                                            <constraint firstAttribute="height" constant="28" id="grV-vq-DJg"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CG-2H-Z6J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="8ed-qk-ncn" firstAttribute="leading" secondItem="3fr-Hu-ma1" secondAttribute="leading" id="6Pt-7c-hoM"/>
+                                    <constraint firstItem="8ed-qk-ncn" firstAttribute="centerX" secondItem="3fr-Hu-ma1" secondAttribute="centerX" id="CHe-Er-eMi"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5N-O6-mPY" secondAttribute="trailing" constant="10" id="DLf-a2-myH"/>
+                                    <constraint firstItem="8ed-qk-ncn" firstAttribute="centerY" secondItem="3fr-Hu-ma1" secondAttribute="centerY" id="LAb-5W-uOv"/>
                                     <constraint firstAttribute="height" constant="50" id="NsM-MI-Ehf"/>
+                                    <constraint firstItem="8ed-qk-ncn" firstAttribute="top" secondItem="3fr-Hu-ma1" secondAttribute="top" constant="20" id="bd8-uC-JcY"/>
+                                    <constraint firstItem="h5N-O6-mPY" firstAttribute="top" secondItem="3fr-Hu-ma1" secondAttribute="top" constant="17" id="rBQ-s5-G54"/>
+                                    <constraint firstAttribute="bottom" secondItem="8ed-qk-ncn" secondAttribute="bottom" id="sem-QD-Fvs"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ed-qk-ncn" secondAttribute="trailing" id="xO1-hK-gcE"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-wu-Z4c">
@@ -78,7 +110,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-FM-0nB">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" placeholder="Search For Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-FM-0nB">
                                 <rect key="frame" x="0.0" y="52" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -109,6 +141,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="nA4-wu-Z4c" id="2eH-Bq-d9I"/>
+                        <outlet property="searchBar" destination="Zbp-FM-0nB" id="M0D-Fz-Mri"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,5 +152,6 @@
     <resources>
         <image name="297" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>

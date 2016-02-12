@@ -25,6 +25,10 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLbl.text = pokemon.name
+        mainImg.image = UIImage(named: "\(pokemon.pokedexID)")
+        pokemon.downloadPokemonDetails { () -> () in
+            // This will be called after download is done
+        }
     }
 
 
